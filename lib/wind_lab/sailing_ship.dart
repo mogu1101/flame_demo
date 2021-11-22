@@ -19,26 +19,42 @@ class SailingShip extends SpriteAnimationComponent {
 
     final shipNum = type.index + 1;
     _shipInWind1 = await SciAnimation.load(
-      frameCount: 76,
-      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind1/1级风-$shipNum号船_000',
-      stepTime: 0.1,
+      frameCount: 26,
+      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind1/pic',
+      extension: 'webp',
+      stepTime: 0.2,
     )
       ..size = size;
     addShip(_shipInWind1);
 
     _shipInWind2 = await SciAnimation.load(
-      frameCount: 51,
-      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind2/2级风-$shipNum号船_000',
+      frameCount: 18,
+      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind2/pic',
+      extension: 'webp',
+      stepTime: 0.2,
+    )
+      ..size = size;
+    // _shipInWind2 = await SciAnimation.load(
+    //   frameCount: 51,
+    //   pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind2/2级风-$shipNum号船_000',
+    //   stepTime: 0.1,
+    // )
+    //   ..size = size;
+
+    _shipInWind3 = await SciAnimation.load(
+      frameCount: 18,
+      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind3/pic000',
+      extension: 'webp',
       stepTime: 0.1,
     )
       ..size = size;
 
-    _shipInWind3 = await SciAnimation.load(
-      frameCount: 51,
-      pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind3/3级风-$shipNum号船_000',
-      stepTime: 0.1,
-    )
-      ..size = size;
+    // _shipInWind3 = await SciAnimation.load(
+    //   frameCount: 51,
+    //   pathPrefix: 'wind_lab/sailing_ship${shipNum}_wind3/3级风-$shipNum号船_000',
+    //   stepTime: 0.1,
+    // )
+    //   ..size = size;
 
     onLoadComplete?.call();
   }

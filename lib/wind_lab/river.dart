@@ -43,9 +43,9 @@ class SailGame extends FlameGame
     _currentY = -mapHeight / 2;
 
     _background = await SciAnimation.load(
-      frameCount: 38,
-      pathPrefix: 'wind_lab/river_back_3/3级风-场景后_000',
-      extension: 'png',
+      frameCount: 1,
+      pathPrefix: 'wind_lab/river_back_1/pic000',
+      extension: 'webp',
       stepTime: 0.1,
     )
       ..size = Vector2(mapWidth, mapHeight)
@@ -76,6 +76,17 @@ class SailGame extends FlameGame
         windowSize.height / 2,
       )
       ..anchor = Anchor.center;
+    // _ship = await SciAnimation.load(
+    //   frameCount: 38,
+    //   pathPrefix: 'wind_lab/sailing_ship1_wind1/pic_',
+    //   extension: 'webp',
+    //   stepTime: 0.2,
+    // )..size = Vector2(408, 282)
+    //   ..position = Vector2(
+    //     windowSize.width / 2,
+    //     windowSize.height / 2,
+    //   )
+    //   ..anchor = Anchor.center;
 
     _wind = Wind()
       ..size = Vector2(161, 74)

@@ -81,8 +81,8 @@ class WindLabGame extends FlameGame with HasTappableComponents {
 
     final background = (await SciAnimation.load(
       frameCount: 51,
-      pathPrefix: 'wind_lab/harbor_bg1/始发站场景_000',
-      extension: 'webp',
+      pathPrefix: 'wind_lab/harbor_bg/始发站场景_000',
+      extension: 'png',
       stepTime: 0.1,
       size: Vector2(windowSize.width, windowSize.height),
     ));
